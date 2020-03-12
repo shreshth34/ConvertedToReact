@@ -3,6 +3,7 @@ import React from 'react'
 
 const Select = (props) =>{
     return (
+       
            
                <select onChange={(event)=>{props.changed(event.target.value)}} id={props.select_id}>  
                     <option value={props.selected_value}> {props.selected_value} </option>  
@@ -13,7 +14,6 @@ const Select = (props) =>{
 
                     })}
 
-                    {/* <option value="date"> date </option>  */}
               </select>
             
         )
