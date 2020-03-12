@@ -2,19 +2,97 @@ import React, { Component } from "react";
 import "./App.css";
 import HelloWorld from "./components/HelloWorld";
 import Select from "./components/Select";
+import Div from "./components/Div";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      select: {
-        selected_value: "text",
-        select_id: "type_of_input",
-        some_value: ["date", "datetime", "email"]
-      },
-      div:{},
-      data: []
+      div: {},
+      data: [
+        {
+          id: "div1",
+          name: "div",
+          type: "div",
+          properties: {
+            css_class: "ui one column grid ",
+            style: ""
+          },
+          elements: [
+            {
+              id: "div99",
+              name: "div",
+              type: "div",
+              properties: {
+                css_class: "column",
+                style: ""
+              },
+              elements: [
+                {
+                  id: "input2",
+                  name: "input",
+                  type: "input",
+                  label: "Name",
+                  align: "center",
+                  properties: {
+                    data_type: "text",
+                    css_class: "input",
+                    style: ""
+                  }
+                },
+                {
+                  id: "input3",
+                  name: "input",
+                  type: "input",
+                  label: "Age",
+                  align: "center",
+                  properties: {
+                    data_type: "text",
+                    css_class: "input",
+                    style: ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+
+        {
+          id: "yoDiv22",
+          name: "div",
+          type: "div",
+          properties: {
+            css_class: "ui one column grid",
+            style: ""
+          },
+          elements: [
+            {
+              id: "yoDiv22",
+              name: "div",
+              type: "div",
+              properties: {
+                css_class: "column",
+                style: ""
+              },
+              elements: [
+                {
+                  id: "veryNewInput",
+                  name: "input",
+                  type: "input",
+                  label: "Birth of Date",
+                  align: "center",
+                  properties: {
+                    data_type: "date",
+                    css_class: "ui input",
+                    style: ""
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     };
   }
 
@@ -30,25 +108,26 @@ class App extends Component {
     });
   };
 
-  sendDivToScreen = () => {};
-
   render() {
+    let data = this.state.data.map(d => {
+      return (
+        <Div
+          id={d.id}
+          name={d.name}
+          className={d.properties.css_class}
+          elements={d.elements}
+        />
+      );
+    });
+
     return (
-      <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" />       */}
-
+      <div id="main1" className="App">
           <HelloWorld />
-
-          <Select
-            select_id={this.state.select.select_id}
-            selected_value={this.state.select.selected_value}
-            some_value={this.state.select.some_value}
-            changed={this.optionChangeHandler}
-          />
-        </header>
+          <div>{data}</div>
+        
       </div>
     );
   }
 }
+
 export default App;

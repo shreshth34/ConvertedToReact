@@ -2,9 +2,15 @@ import React, { Component } from 'react'
 
 export class HelloWorld extends Component {
     render() {
+        const newstyle = {
+            fontFamily:"Poppins",
+            fontSize: "90px"
+        }
+
+
         return (
             <div>
-                <h1>Good Morning</h1>
+                <h1 style={newstyle}>Good Morning</h1>
             </div>
         )
     }

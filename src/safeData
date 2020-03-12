@@ -1,0 +1,17 @@
+json = [
+select: {
+        selected_value: "text",
+        select_id: "type_of_input",
+        some_value: ["date", "datetime", "email"]
+      },
+]
+
+  <Select
+            select_id={this.state.select.select_id}
+            selected_value={this.state.select.selected_value}
+            some_value={this.state.select.some_value}
+            changed={this.optionChangeHandler}
+          />
+
+
+____________________________________________________________________________
