@@ -26,7 +26,7 @@ const Div = props => {
   }
   return (
       
-    <div id={props.id} className={props.className}>
+    <div onClick={props.onClick} id={props.id} className={props.className}>
       {elem} {props.children}
     </div>
   );

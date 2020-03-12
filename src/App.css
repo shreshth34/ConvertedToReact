@@ -18,6 +18,16 @@
   color: yellow
 }
 
+#diffDiv{
+  background-color: white;
+  width:270px;
+  height: 240px;
+  color: black;
+  text-align: center;
+  padding: 40px;
+}
+
+
 .App-link {
   color: #61dafb;
 }

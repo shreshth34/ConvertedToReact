@@ -3,6 +3,7 @@ import "./App.css";
 import HelloWorld from "./components/HelloWorld";
 import Select from "./components/Select";
 import Div from "./components/Div";
+import Input from "./components/Input";
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class App extends Component {
           name: "div",
           type: "div",
           properties: {
-            css_class: "ui one column grid ",
+            css_class: "ui two column grid ",
             style: ""
           },
           elements: [
@@ -54,21 +55,9 @@ class App extends Component {
                   }
                 }
               ]
-            }
-          ]
-        },
-
-        {
-          id: "yoDiv22",
-          name: "div",
-          type: "div",
-          properties: {
-            css_class: "ui one column grid",
-            style: ""
-          },
-          elements: [
+            },
             {
-              id: "yoDiv22",
+              id: "div26363",
               name: "div",
               type: "div",
               properties: {
@@ -77,20 +66,55 @@ class App extends Component {
               },
               elements: [
                 {
-                  id: "veryNewInput",
+                  id: "input898262",
                   name: "input",
                   type: "input",
-                  label: "Birth of Date",
+                  label: "Job Title",
                   align: "center",
                   properties: {
-                    data_type: "date",
-                    css_class: "ui input",
+                    data_type: "text",
+                    css_class: "input",
                     style: ""
                   }
                 }
               ]
             }
           ]
+          // },
+
+          // {
+          //   id: "yoDiv22",
+          //   name: "div",
+          //   type: "div",
+          //   properties: {
+          //     css_class: "ui two column grid",
+          //     style: ""
+          //   },
+          //   elements: [
+          //     {
+          //       id: "yoDiv22",
+          //       name: "div",
+          //       type: "div",
+          //       properties: {
+          //         css_class: "column",
+          //         style: ""
+          //       },
+          //       elements: [
+          //         {
+          //           id: "veryNewInput",
+          //           name: "input",
+          //           type: "input",
+          //           label: "Birth of Date",
+          //           align: "center",
+          //           properties: {
+          //             data_type: "date",
+          //             css_class: "ui input",
+          //             style: ""
+          //           }
+          //         }
+          //       ]
+          //     }
+          //   ]
         }
       ]
     };
@@ -108,6 +132,13 @@ class App extends Component {
     });
   };
 
+  clickableEvent = e1 => {
+
+    console.log(e1);
+
+  
+  };
+
   render() {
     let data = this.state.data.map(d => {
       return (
@@ -122,9 +153,16 @@ class App extends Component {
 
     return (
       <div id="main1" className="App">
-          <HelloWorld />
-          <div>{data}</div>
-        
+        <HelloWorld />
+        <br />
+        <br />
+        <br />
+        <div>{data}</div>
+        <Div id="diffDiv" className="ui card" onClick={this.clickableEvent}>
+          {" "}
+          {new Date().toLocaleDateString()}{" "}
+        </Div>
+        <Input id="4455" label="App.js" type="text" />
       </div>
     );
   }
