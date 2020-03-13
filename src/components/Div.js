@@ -10,7 +10,7 @@ const Div = props => {
         console.log("inp")
       if (e.name === "input") {
         return (
-          <Input id={e.id} label={e.label} type={e.properties.data_type} />
+          <Input id={e.id} label={e.label} type={e.properties.data_type} onClick={props.onClick}/> 
         );
       }
       else if(e.name === "div"){

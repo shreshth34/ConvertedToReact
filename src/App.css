@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin+Condensed|Poppins|Cinzel|Righteous|Amatic+SC:400,800');
 
-
-
-
-
-
 .App{
-  background: #000428;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
@@ -15,7 +9,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: yellow
+  color: black
 }
 
 #diffDiv{
@@ -25,6 +19,20 @@
   color: black;
   text-align: center;
   padding: 40px;
+}
+
+#div1{
+  
+  width:300px;
+  height:300px
+}
+
+#right-sidebar{
+  margin-top:40px;
+  margin-left: 950px;
+  width:400px;
+  height:550px;
+  background-color: white;
 }
 
 

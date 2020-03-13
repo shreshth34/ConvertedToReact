@@ -16,7 +16,7 @@ export class HelloWorld extends Component {
 
         return (
             <div>
-                <h1 style={newstyle}>शुभ प्रभात</h1>
+                <h1 style={newstyle}>Henlo | User</h1>
             </div>
         )
     }
